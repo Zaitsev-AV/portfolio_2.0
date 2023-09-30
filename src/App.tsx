@@ -1,94 +1,55 @@
-import styled from "styled-components";
-import {MyAnimation} from "@/styles/animations/Animations.tsx";
+import styled, {css} from "styled-components";
 
 export function App() {
   return (
-    <div>
-      <Menu>
-        <ul>
-          <li><a href="">menu item</a></li>
-          <li><a href="">menu item</a></li>
-          <li><a href="">menu item</a></li>
-        </ul>
-      </Menu>
-      <Wrapper>
-        <StyledBtn>
-          Какой-то текст
-        </StyledBtn>
-        <StyledBtn as='a'>
-          Какой-то текст link
-        </StyledBtn>
-        <SupperButton>New button</SupperButton>
-        <SupperButton as={Link}>New button as Link</SupperButton>
-      </Wrapper>
-    </div>
+    <Box>
+      <StyledBtn fontSize='30px' variant='outline'>Hello</StyledBtn>
+      <StyledBtn color='blue' variant='primary'>Hello</StyledBtn>
+    </Box>
   )
 }
 
-const StyledBtn = styled.button`
+interface SupperButtonProps {
+  fontSize?: string
+  color?: string
+  variant?: 'outline' | 'primary'
+}
+
+const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  background-color: brown;
-  padding: 10px 20px;
-
-  color: #242424;
-`
-
-
-const Link = styled.a`
-  color: magenta;
-  background-color: aqua;
-
-`
-
-const Wrapper = styled.div`
-  display: flex;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
-
-  & button {
-    cursor: pointer;
-  }
-
-  ${Link} {
-    cursor: zoom-in;
-  }
-  @media screen and (max-width: 800px) {
-    flex-direction: column;
-  }
 `
 
-const SupperButton = styled(StyledBtn)`
-  border-radius: 5px;
-  background-color: #747bff;
+const StyledBtn = styled.button<SupperButtonProps>`
+  border: none;
+  border-radius: 14px;
+  //background-color: brown;
+  background-color: ${props => props.color || '#61942e'};
+  padding: 10px 20px;
+  font-size: ${props => props.fontSize || '25px'};
+  color: #242424;
 
-  &:hover {
-    background-color: burlywood;
-  }
-
-  &:last-child:hover {
-    background-color: chartreuse;
-  }
-  &:hover {
-    animation: ${MyAnimation} 2s ease infinite;
-  }
-`
-
-const Menu = styled.nav`
-  ul {
-    display: flex;
-    padding: 0;
-    list-style: none;
-
-    li > a {
-      color: #61942e;
+  ${props => props.variant === 'primary' && css<SupperButtonProps>`
+    background-color: ${props => props.color || '#61942e'};
+    color: #c92c2c;
+    &:hover {
+      background-color: transparent;
     }
-    li + li {
-      margin-left: 20px;
+  `}
+
+
+  ${props => props.variant === 'outline' && css<SupperButtonProps>`
+    color: ${props => props.color || '#61942e'};
+    border: 2px solid ${props => props.color || '#61942e'};
+    background-color: transparent;
+    &:hover {
+      background-color: chartreuse;
     }
-  }
+  `}
 `
+
+
+
