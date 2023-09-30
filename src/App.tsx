@@ -55,6 +55,12 @@ const StyledBtn = styled.button<SupperButtonProps>`
       box-shadow: 5px 5px 5px 13px rgba(178, 94, 94, 0.25);
     }
   `}
+
+  ${props => props.active && css<SupperButtonProps> `
+    &:hover {
+      box-shadow: 5px 5px 5px 13px rgba(178, 94, 94, 0.25);
+    }
+  `}
 `
 
 
