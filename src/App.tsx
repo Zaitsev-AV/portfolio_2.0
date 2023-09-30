@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 export function App() {
   return (
     <Box>
-      <StyledBtn fontSize='30px' variant='outline'>Hello</StyledBtn>
+      <StyledBtn fontSize='30px' variant='outline' active>Hello</StyledBtn>
       <StyledBtn color='blue' variant='primary'>Hello</StyledBtn>
     </Box>
   )
@@ -13,6 +13,7 @@ interface SupperButtonProps {
   fontSize?: string
   color?: string
   variant?: 'outline' | 'primary'
+  active?: boolean
 }
 
 const Box = styled.div`
@@ -47,6 +48,11 @@ const StyledBtn = styled.button<SupperButtonProps>`
     background-color: transparent;
     &:hover {
       background-color: chartreuse;
+    }
+  `}
+  ${props => props.active && css<SupperButtonProps> `
+    &:hover {
+      box-shadow: 5px 5px 5px 13px rgba(178, 94, 94, 0.25);
     }
   `}
 `
