@@ -1,10 +1,12 @@
 import styled, {css} from "styled-components";
+import {Cards} from "@/components/ui/cards.tsx";
 
 export function App() {
   return (
     <Box>
-      <StyledBtn fontSize='30px' variant='outline' active>Hello</StyledBtn>
-      <StyledBtn color='blue' variant='primary'>Hello</StyledBtn>
+      <Cards/>
+      {/*<StyledBtn fontSize='30px' variant='outline' active>Hello</StyledBtn>*/}
+      {/*<StyledBtn color='blue' variant='primary'>Hello</StyledBtn>*/}
     </Box>
   )
 }
