@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {FontSize, FontWeight, Typography} from "@/components/ui/typography";
+import {EFontSize, EFontWeight, Typography} from "@/components/ui/typography";
 import {CSSProperties} from "react";
 
 // interface Props {
@@ -14,17 +14,17 @@ export const Cards = () => {
           alt="Кекс" width={200} height={200} style={{borderRadius: '10px'}}/>
       </Container>
       <Container margin={'13px'}>
-        <Typography fontSize={FontSize.ExtraLarge} fontWeight={FontWeight.Bold} color={'#0c0c0c'}>Какой-то тайтл у этой
+        <Typography fontSize={EFontSize.ExtraLarge} fontWeight={EFontWeight.Bold} color={'#0c0c0c'}>Какой-то тайтл у этой
           карточки</Typography>
       </Container>
       <Container margin={'10px'}>
-        <Typography fontSize={FontSize.Medium} fontWeight={FontWeight.Light} color={'#0c0c0c'}>Text Text Text Text Text
+        <Typography fontSize={EFontSize.Medium} fontWeight={EFontWeight.Light} color={'#0c0c0c'}>Text Text Text Text Text
           Text Text Text Text Tex tText</Typography>
       </Container>
       <div style={{display: "flex", gap: '10px'}}>
-        <Button bgColor={'#144dbe'}> <Typography fontSize={FontSize.Regular}
+        <Button bgColor={'#144dbe'}> <Typography fontSize={EFontSize.Regular}
                                                  color={'#fff'}> Added </Typography></Button>
-        <Button bgColor={'#ffffff'} border> <Typography fontSize={FontSize.Regular}
+        <Button bgColor={'#ffffff'} border> <Typography fontSize={EFontSize.Regular}
                                                         color={'#144dbe'}> Delete </Typography></Button>
       </div>
     </Box>
