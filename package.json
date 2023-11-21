@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.28",
+    "@zaitsev_av/eslint-config-zaitsev-av": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.8"
