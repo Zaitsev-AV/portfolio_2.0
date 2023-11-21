@@ -1,9 +1,5 @@
-import {Header} from "@/layout/header";
+import { Header } from "@/layout/header";
 
 export function App() {
-  return (
-  <Header/>
-  )
+  return <Header />;
 }
-
-

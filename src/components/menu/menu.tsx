@@ -5,28 +5,28 @@ export const Menu = () => {
     <StyledMenu>
       <ul>
         <li>
-          <a href="">home</a>
+          <a href={""}>home</a>
         </li>
         <li>
-          <a href="">skills</a>
+          <a href={""}>skills</a>
         </li>
         <li>
-          <a href="">works</a>
+          <a href={""}>works</a>
         </li>
         <li>
-          <a href="">About</a>
+          <a href={""}>About</a>
         </li>
         <li>
-          <a href="">contact</a>
+          <a href={""}>contact</a>
         </li>
       </ul>
     </StyledMenu>
-  )
-}
+  );
+};
 
-const StyledMenu = styled.nav `
+const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
   }
-`
+`;
