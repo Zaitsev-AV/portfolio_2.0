@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import sc from "styled-components";
 
 export const Menu = () => {
   return (
@@ -24,7 +24,7 @@ export const Menu = () => {
   );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = sc.nav`
   ul {
     display: flex;
     gap: 30px;

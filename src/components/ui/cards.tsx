@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 
 import { EFontSize, EFontWeight, Typography } from "@/components/ui/typography";
-import styled from "styled-components";
+import sc from "styled-components";
 
 // interface Props {
 //
@@ -58,7 +58,7 @@ export const Cards = () => {
   );
 };
 
-const Box = styled.div`
+const Box = sc.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +76,7 @@ interface IButtonProps {
   color?: CSSProperties["color"];
 }
 
-const Button = styled.button<IButtonProps>`
+const Button = sc.button<IButtonProps>`
   width: 90px;
   height: 40px;
   border-radius: 10px;
@@ -89,6 +89,6 @@ const Button = styled.button<IButtonProps>`
   }
 `;
 
-const Container = styled.div<{ margin?: string }>`
+const Container = sc.div<{ margin?: string }>`
   margin: ${(props) => props.margin || 0};
 `;
