@@ -1,4 +1,4 @@
-import { Icon } from "@/components/icon/icon.tsx";
+import { Icon } from "@/components/icon/icon";
 
 export const Logo = () => {
   return (

@@ -3,9 +3,7 @@ module.exports = {
     overrides: [
         {
             files: ['**/*.stories.tsx'],
-            rules: {
-                "import/no-named-as-default": "off"
-            },
+            rules: {},
         },
     ],
 }
